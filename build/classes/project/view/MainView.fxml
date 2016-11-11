@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="background" prefHeight="600.0" prefWidth="800.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.view.MainViewController">
+   <center>
+      <VBox id="wplaty_box" alignment="CENTER" prefHeight="473.0" prefWidth="800.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="wplata_box" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label id="head" prefHeight="39.0" prefWidth="311.0" text="Wpłaty w tym miesiącu">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="month_wp" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="136.0" />
+                  <Label fx:id="month_wal" prefHeight="30.0" prefWidth="107.0" text="zł" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label id="head" prefHeight="30.0" prefWidth="311.0" text="Wydatki w tym miesiącu">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="budget1" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="136.0" />
+                  <Label fx:id="budget1_wal" prefHeight="30.0" prefWidth="107.0" text="zł" />
+               </children>
+            </HBox>
+            <BarChart fx:id="catChart" prefHeight="401.0" prefWidth="800.0">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <xAxis>
+                  <CategoryAxis side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis label="Suma" side="LEFT" />
+               </yAxis>
+            </BarChart>
+            <HBox alignment="CENTER" prefHeight="63.0" prefWidth="800.0" spacing="10.0">
+               <children>
+                  <Label id="head" prefHeight="39.0" prefWidth="152.0" text="Stan konta" />
+                  <Label fx:id="budget" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="243.0" />
+                  <Label prefHeight="30.0" prefWidth="107.0" text="zł" />
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+   </center>
+   <padding>
+      <Insets bottom="10.0" />
+   </padding>
+   <bottom>
+      <HBox>
+         <children>
+            <Button fx:id="a" mnemonicParsing="false" onAction="#goShowMain" prefHeight="33.0" prefWidth="378.0" text="Strona Domowa" BorderPane.alignment="CENTER" />
+            <Label prefHeight="30.0" prefWidth="237.0" />
+            <Button fx:id="a1" mnemonicParsing="false" onAction="#goShowCategories" prefHeight="33.0" prefWidth="199.0" text="Zarządzaj kategoriami" />
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <HBox prefHeight="33.0" prefWidth="725.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#goAddOperation" prefHeight="33.0" prefWidth="387.0" text="Dodaj operacje" />
+            <Button mnemonicParsing="false" onAction="#goShowExpenses" prefHeight="33.0" prefWidth="410.0" text="Zobacz transakcje" />
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

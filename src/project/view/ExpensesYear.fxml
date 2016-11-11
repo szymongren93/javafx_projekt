@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane id="background" fx:id="catChart" prefHeight="400.0" prefWidth="887.0" stylesheets="@window.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.view.ExpensesYearController">
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="365.0" prefWidth="350.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Separator>
+            <BarChart fx:id="catChart1" prefHeight="380.0" prefWidth="800.0" title="Wydatki (bieżący rok)">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <xAxis>
+                  <CategoryAxis label="Kategoria" side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis label="Suma" side="LEFT" />
+               </yAxis>
+            </BarChart>
+            <Separator prefHeight="93.0" prefWidth="602.0">
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </Separator>
+         </children>
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="4.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
+
+         <BorderPane.margin>
+            <Insets bottom="10.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>

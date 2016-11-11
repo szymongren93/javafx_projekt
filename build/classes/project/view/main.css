@@ -1,0 +1,60 @@
+
+#background {
+	-fx-background-color: #eee;
+}
+
+#month_wp, #month_wal {
+    -fx-text-fill: #008000;
+    
+}
+#budget1, #budget1_wal {
+    -fx-text-fill: #FF3333;
+}
+.label {
+    -fx-font-size: 15pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: #222;
+    -fx-opacity: 0.6;
+}
+
+#head {
+    -fx-font-size: 12pt;
+}
+
+.menu-bar {
+    -fx-background-color: derive(#256f6e,20%);
+}
+
+.menu-bar .label {
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-opacity: 0.9;
+}
+
+.menu-item .label {
+    -fx-text-fill: black;
+    -fx-font-family: "Segoe UI Light";
+}
+
+.text-field {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.button {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #256f6e;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: #d8d8d8;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:hover {
+    -fx-opacity: 0.8;
+    -fx-cursor: hand;
+}

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane id="background" prefHeight="400.0" prefWidth="350.0" stylesheets="@window.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.view.AddOperationController">
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="365.0" prefWidth="350.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Separator>
+            <GridPane prefHeight="176.0" prefWidth="209.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="153.0" minWidth="10.0" prefWidth="140.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="105.0" minWidth="10.0" prefWidth="86.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="50.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="Nazwa transakcji:" />
+                  <Label text="Kategoria:" GridPane.rowIndex="1" />
+                  <Label text="Data" GridPane.rowIndex="2" />
+                  <Label text="Wartość (zł):" GridPane.rowIndex="3" />
+                  <TextField fx:id="operationName" GridPane.columnIndex="1" />
+                  <ChoiceBox fx:id="category" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                  <DatePicker fx:id="date" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="value" alignment="CENTER_RIGHT" promptText="0,00" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button fx:id="dodaj" mnemonicParsing="false" onAction="#goAddCategory" prefHeight="33.0" prefWidth="88.0" text="Dodaj" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <Label id="error" fx:id="warning" visible="false" />
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </Separator>
+         </children>
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="4.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#add" text="OK" />
+            <Button fx:id="cancel" mnemonicParsing="false" onAction="#close" text="Anuluj" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>
